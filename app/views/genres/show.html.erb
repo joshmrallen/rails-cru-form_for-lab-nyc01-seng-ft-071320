@@ -1,0 +1,6 @@
+<h1><%= @genre.name %></h1>
+
+<h3><strong><%= label_tag "#{@genre.name} Artists:"%></strong></h3><br>
+<% @genre.artists.each do |artist| %>
+    <%= link_to artist.name, artist_path(artist.id) %><br>
+<% end %>
